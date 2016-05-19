@@ -7,7 +7,7 @@ load("fir.rda")
 
 #select only weighted, phase-in taxable assessment
 assessments <- fir%>%
-  select(MUNID, MARSYEAR, LT1NAME, region, MUNTIER, "CVA.res" = slc.261.10.17,
+  select(MUNID, as.numeric(MARSYEAR), LT1NAME, region, MUNTIER, "CVA.res" = slc.261.10.17,
          "CVA.res.multires" = slc.261.50.17,
          "CVA.res.farmland" = slc.261.110.17,
          "CVA.res.managedforest" = slc.261.140.17,
